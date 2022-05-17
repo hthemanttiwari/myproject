@@ -1,3 +1,5 @@
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+    pageEncoding="ISO-8859-1"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
@@ -49,7 +51,7 @@ span.psw {
 }
 </style>
 </head>
-<body style="background-color:#fa7014">
+<body>
 	<h1>ForgotPassword</h1>	
 	<form action="GetPassword" method="post">
 	  <div class="container">

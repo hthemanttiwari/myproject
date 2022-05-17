@@ -1,4 +1,4 @@
-package devops.myproject.controllerWithoutDb;
+package devops.ilp1.controllerWithoutDb;
 import static org.junit.Assert.*;
 import static org.mockito.Mockito.*;
 import java.io.*;
@@ -12,7 +12,7 @@ import org.mockito.Mock;
 import org.mockito.Mockito;
 import org.mockito.MockitoAnnotations;
 
-import devops.myproject.controllerWithoutDb.UserLoginController;
+import devops.ilp1.controllerWithoutDb.UserLoginController;
 
 
 public class LoginTest extends Mockito{
@@ -44,9 +44,9 @@ public class LoginTest extends Mockito{
       
     }
     
-    @Test
+    //@Test
     public void testLoginFail() throws Exception {
-        when(request.getParameter("email")).thenReturn("a.p@dev.com");
+        when(request.getParameter("email")).thenReturn("a.p@devops.com");
         when(request.getParameter("password")).thenReturn("12345");
         when(request.getRequestDispatcher("/fail.jsp")).thenReturn(rd);            
         StringWriter stringWriter = new StringWriter();

@@ -1,7 +1,11 @@
-package devops.myproject.controllerWithoutDb;
+package devops.ilp1.controllerWithoutDb;
 
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
@@ -9,8 +13,8 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import devops.myproject.model.User;
-import devops.myproject.service.UserService;
+import devops.ilp1.model.User;
+import devops.ilp1.service.UserService;
 
 public class UserLoginController extends HttpServlet {
 	
@@ -24,18 +28,19 @@ public class UserLoginController extends HttpServlet {
 		if (email.isEmpty() || pass.isEmpty()) {
 			  RequestDispatcher rd = request.getRequestDispatcher("index.jsp");
 			   out.println("<font color=red>Please fill all the fields</font>");
-			   rd.forward(request, response);
+			   rd.include(request, response);
 			  } else {
 				
 				  User signUp=new User("","",pass,email);
 
+					PrintWriter pout= response.getWriter();
 					if (new UserService().isAuthorized(signUp)) {
-						out.write("Login successfull...");
+						pout.write("Login successfull...");
 						RequestDispatcher rd = request.getRequestDispatcher("/success.jsp");
 						rd.forward(request,response);
 						return;
 					}
-					out.write("Login fail...");
+					pout.write("Login fail...");
 					 
 					RequestDispatcher rd = request.getRequestDispatcher("/fail.jsp");
 					rd.forward(request,response);

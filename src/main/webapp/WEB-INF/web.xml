@@ -13,17 +13,17 @@
 
 	<servlet>
 		<servlet-name>Login</servlet-name>
-		<servlet-class>devops.myproject.controllerWithoutDb.UserLoginController</servlet-class>
+		<servlet-class>devops.ilp1.controllerWithoutDb.UserLoginController</servlet-class>
 	</servlet>
 	
 	<servlet>
 		<servlet-name>Register</servlet-name>
-		<servlet-class>devops.myproject.controllerWithoutDb.UserRegisterController</servlet-class>
+		<servlet-class>devops.ilp1.controllerWithoutDb.UserRegisterController</servlet-class>
 	</servlet>
 	
 	<servlet>
 		<servlet-name>GetPassword</servlet-name>
-		<servlet-class>devops.myproject.controllerWithoutDb.UserPasswordController</servlet-class>
+		<servlet-class>devops.ilp1.controllerWithoutDb.UserPasswordController</servlet-class>
 	</servlet>
 
 	<servlet-mapping>

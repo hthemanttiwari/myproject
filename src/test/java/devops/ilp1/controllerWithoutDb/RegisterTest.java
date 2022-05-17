@@ -1,4 +1,4 @@
-package devops.myproject.controllerWithoutDb;
+package devops.ilp1.controllerWithoutDb;
 import static org.junit.Assert.*;
 import static org.mockito.Mockito.*;
 import java.io.*;
@@ -12,7 +12,7 @@ import org.mockito.Mock;
 import org.mockito.Mockito;
 import org.mockito.MockitoAnnotations;
 
-import devops.myproject.controllerWithoutDb.UserRegisterController;
+import devops.ilp1.controllerWithoutDb.UserRegisterController;
 
 
 
@@ -32,7 +32,7 @@ public class RegisterTest extends Mockito{
     public void testRegistrationSuccess() throws Exception {
     	when(request.getParameter("firstname")).thenReturn("fname");
     	when(request.getParameter("lastname")).thenReturn("lname");
-        when(request.getParameter("email")).thenReturn("myproject.user@cicd.com");
+        when(request.getParameter("email")).thenReturn("Xavinash.patel@wipro.com");
         when(request.getParameter("pass")).thenReturn("1234");
         when(request.getParameter("confirmpass")).thenReturn("1234");
         when(request.getRequestDispatcher("/index.jsp")).thenReturn(rd);            

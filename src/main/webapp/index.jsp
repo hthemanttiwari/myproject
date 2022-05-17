@@ -36,7 +36,8 @@ button:hover {
 }
 
 span.psw {
-    float: left;
+    float: right;
+    padding-top: 16px;
 }
 
 /* Change styles for span and cancel button on extra small screens */
@@ -48,8 +49,8 @@ span.psw {
 }
 </style>
 </head>
-<body style="background-color:#ff0000">
-	<h1>UID Portal</h1>
+<body>
+	<h1>ILP Book Store</h1>
 	<form action="Login" method="post">
 	  <div class="container" >
 	    <label><b>Email</b></label>
@@ -61,8 +62,8 @@ span.psw {
 	    <button type="submit">Login</button>
 	  </div>
 	
-	  <div class="container" style="background-color:#faf214">
-	    <span><a href="forgotpassword.jsp">Forgot password?</a>&nbsp &nbsp <a href="register.jsp" id="register">New User ?</a> </span>
+	  <div class="container" style="background-color:#f1f1f1">
+	    <span class="psw"><a href="forgotpassword.jsp">Forgot password?</a>&nbsp &nbsp <a href="register.jsp" id="register">New User ?</a> </span>
 	  </div>
 </form>
 </body>

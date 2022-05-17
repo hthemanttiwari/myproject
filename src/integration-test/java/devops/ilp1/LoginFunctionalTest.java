@@ -1,4 +1,4 @@
-package devops.myproject;
+package devops.ilp1;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -11,7 +11,7 @@ import org.openqa.selenium.remote.RemoteWebDriver;
 
 import org.openqa.selenium.firefox.FirefoxOptions;
 
-import devops.myproject.IntegrationTest;
+import devops.ilp1.IntegrationTest;
 
 import org.junit.*;
 import static org.junit.Assert.*;
@@ -45,7 +45,7 @@ public class LoginFunctionalTest {
 
 	@Test
 	public void loginSuccess() {
-        driver.get("http://localhost:6080/myproject");
+        driver.get("http://localhost:6080/ILP_Fancystore");
         WebElement email = driver.findElement(By.name("email"));
         WebElement pass = driver.findElement(By.name("password"));
         WebElement button = driver.findElement(By.xpath("/html/body/form/div/button"));         
@@ -57,7 +57,7 @@ public class LoginFunctionalTest {
 	
 	//@Test
 	public void loginFail() {
-        driver.get("http://localhost:6080/myproject");
+        driver.get("http://localhost:6080/ILP_Fancystore");
         WebElement email = driver.findElement(By.name("email"));
         WebElement pass = driver.findElement(By.name("password"));
         WebElement button = driver.findElement(By.xpath("/html/body/form/div/button"));         
@@ -68,8 +68,8 @@ public class LoginFunctionalTest {
 	}
 	
 	@Test
-	public void registrationSuccess() 
-        driver.get("http://localhost:6080/myproject/register.jsp");
+	public void registrationSuccess() {
+        driver.get("http://localhost:6080/ILP_Fancystore/register.jsp");
         WebElement firstname = driver.findElement(By.name("firstname"));
         WebElement lastname = driver.findElement(By.name("lastname"));
         WebElement confirmpass = driver.findElement(By.name("confirmpass"));
@@ -82,12 +82,12 @@ public class LoginFunctionalTest {
         confirmpass.sendKeys("1234");
         email.sendKeys("aa@devops.com");
         button.click();
-        assertTrue(driver.getPageSource().contains("Store"));
+        assertTrue(driver.getPageSource().contains("Fancy Store"));
 	}
 	
 	@Test
 	public void forgotPasswordSuccess() {
-        driver.get("http://localhost:6080/myproject/forgotpassword.jsp");      
+        driver.get("http://localhost:6080/ILP_Fancystore/forgotpassword.jsp");      
         WebElement confirmpass = driver.findElement(By.name("confirmpassword"));
         WebElement email = driver.findElement(By.name("email"));
         WebElement pass = driver.findElement(By.name("newpassword"));
@@ -96,6 +96,6 @@ public class LoginFunctionalTest {
         confirmpass.sendKeys("1234");
         email.sendKeys("a.p@devops.com");
         button.click();
-        assertTrue(driver.getPageSource().contains("Store"));
+        assertTrue(driver.getPageSource().contains("Fancy Store"));
 	}
 }

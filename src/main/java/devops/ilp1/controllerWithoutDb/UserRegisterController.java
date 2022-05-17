@@ -1,7 +1,10 @@
-package devops.myproject.controllerWithoutDb;
+package devops.ilp1.controllerWithoutDb;
 
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.PreparedStatement;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
@@ -9,13 +12,12 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import devops.myproject.model.User;
-import devops.myproject.service.UserService;
+import devops.ilp1.model.User;
+import devops.ilp1.service.UserService;
 
 public class UserRegisterController extends HttpServlet{
 	public void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		 
-		  String registerPath = "/register.jsp";
 		  response.setContentType("text/html");
 		  PrintWriter out = response.getWriter();
 		  String fname = request.getParameter("firstname");
@@ -26,7 +28,7 @@ public class UserRegisterController extends HttpServlet{
 		 
 
 		  if (fname.isEmpty() || lname.isEmpty() || pass.isEmpty() || confirmpass.isEmpty() || email.isEmpty()) {
-			   RequestDispatcher rd = request.getRequestDispatcher(registerPath);
+			   RequestDispatcher rd = request.getRequestDispatcher("/register.jsp");
 			   out.println("<font color=red>Please fill all the fields</font>");
 			   rd.include(request, response);
 		  } 
@@ -43,7 +45,7 @@ public class UserRegisterController extends HttpServlet{
 			    }
 			    else
 			    {
-			  	  RequestDispatcher rd = request.getRequestDispatcher(registerPath);
+			  	  RequestDispatcher rd = request.getRequestDispatcher("/register.jsp");
 			  	  out.println("<font color=red>Registration fail</font>");
 			  	  rd.include(request, response);
 			    }
@@ -53,7 +55,7 @@ public class UserRegisterController extends HttpServlet{
 			  else
 			  {
 				  out.println("<font color=red>Password and Confirm Password doen't matches</font>");
-				  RequestDispatcher rd = request.getRequestDispatcher(registerPath);
+				  RequestDispatcher rd = request.getRequestDispatcher("/register.jsp");
 				  rd.include(request, response);
 			  }
 		 }

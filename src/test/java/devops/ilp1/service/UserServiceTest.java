@@ -1,10 +1,10 @@
-package devops.myproject.service;
+package devops.ilp1.service;
 
 import static org.junit.Assert.*;
 
 import org.junit.Test;
 
-import devops.myproject.model.User;
+import devops.ilp1.model.User;
 
 public class UserServiceTest {
 

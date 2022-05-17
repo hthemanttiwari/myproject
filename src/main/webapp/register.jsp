@@ -1,8 +1,10 @@
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+	pageEncoding="ISO-8859-1"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<title>UID Registration</title>
+<title>Register</title>
 <style>
 form {
     border: 3px solid #f1f1f1;
@@ -49,7 +51,7 @@ span.psw {
 }
 </style>
 </head>
-<body style="background-color:#fa7014">
+<body>
 	<h1>Registration Form</h1>
 	<form action="Register" method="post">
 	  <div class="container">
@@ -64,7 +66,7 @@ span.psw {
 	    <input type="password" placeholder="Enter Password" name="pass" required>
 	    
 	    <label><b>Confirm Password</b></label>
-	    <input type="password" placeholder="Confirm Password" name="confirmpass" required>
+	    <input type="password" placeholder="Enter ConfirmPassword" name="confirmpass" required>
 	    
 	    <label><b>Email</b></label>
 	    <input type="text" placeholder="Enter Email" name="email" required>        
