@@ -1,0 +1,13 @@
+---
+# tasks file for ./roles/myproject
+
+  - name: Build Docker Image
+    shell: docker build -t myproject /var/lib/jenkins/workspace/myproject/Ansible/roles/myproject/files
+
+  - name: Docker Compose call
+    shell: |
+      docker stack rm myproject
+      sleep 10
+      docker stack deploy -c /var/lib/jenkins/workspace/myproject/Ansible/roles/myproject/files/docker-compose-myproject.yaml myproject
+
+

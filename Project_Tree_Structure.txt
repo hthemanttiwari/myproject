@@ -1,0 +1,73 @@
+cicd@cicd-vbox:~/labs/mvn_labs/mavenProcess/myproject$ ls
+Ansible  Jenkinsfile  pom.xml  src
+cicd@cicd-vbox:~/labs/mvn_labs/mavenProcess/myproject$ tree
+.
+├── Ansible
+│   ├── ansible.cfg
+│   ├── ansiserver
+│   ├── myproject.yml
+│   └── roles
+│       └── myproject
+│           ├── defaults
+│           │   └── main.yml
+│           ├── files
+│           │   ├── docker-compose-myproject.yaml
+│           │   └── Dockerfile
+│           ├── handlers
+│           │   └── main.yml
+│           ├── meta
+│           │   └── main.yml
+│           ├── README.md
+│           ├── tasks
+│           │   └── main.yml
+│           ├── templates
+│           ├── tests
+│           │   ├── inventory
+│           │   └── test.yml
+│           └── vars
+│               └── main.yml
+├── Jenkinsfile
+├── pom.xml
+└── src
+    ├── integration-test
+    │   └── java
+    │       └── devops
+    │           └── myproject
+    │               ├── IntegrationTest.java
+    │               └── LoginFunctionalTest.java
+    ├── main
+    │   ├── java
+    │   │   └── devops
+    │   │       └── myproject
+    │   │           ├── controllerWithoutDb
+    │   │           │   ├── UserLoginController.java
+    │   │           │   ├── UserPasswordController.java
+    │   │           │   └── UserRegisterController.java
+    │   │           ├── db
+    │   │           │   └── UserDb.java
+    │   │           ├── model
+    │   │           │   └── User.java
+    │   │           └── service
+    │   │               └── UserService.java
+    │   └── webapp
+    │       ├── fail.jsp
+    │       ├── forgotpassword.jsp
+    │       ├── index.jsp
+    │       ├── register.jsp
+    │       ├── success.jsp
+    │       └── WEB-INF
+    │           └── web.xml
+    └── test
+        └── java
+            └── devops
+                └── myproject
+                    ├── controllerWithoutDb
+                    │   ├── ChangePasswordTest.java
+                    │   ├── LoginTest.java
+                    │   └── RegisterTest.java
+                    └── service
+                        └── UserServiceTest.java
+
+32 directories, 33 files
+
+cicd@cicd-vbox:~/labs/mvn_labs/mavenProcess/myproject$
