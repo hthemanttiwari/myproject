@@ -6,7 +6,7 @@ pipeline {
   }
 
   parameters {
-    string(name: 'BranchName', defaultValue: 'master', description: 'branch to build')
+    string(name: 'BranchName', defaultValue: 'main', description: 'branch to build')
     choice(name: 'ArtifactRepo', choices: ['snapshot', 'releases'], description: 'Artifact repository')
   }
   
