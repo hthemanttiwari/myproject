@@ -4,7 +4,6 @@ WORKDIR /opt/
 
 ADD https://downloads.apache.org/tomcat/tomcat-8/v8.5.78/bin/apache-tomcat-8.5.78.tar.gz /opt/apache-tomcat-8.5.78.tar.gz \
     && https://download.java.net/java/ga/jdk11/openjdk-11_linux-x64_bin.tar.gz /opt/openjdk-11_linux-x64_bin.tar.gz
-    https://download.java.net/java/ga/jdk11/openjdk-11_linux-x64_bin.tar.gz
 
 RUN tar -xvzf apache-tomcat-8.5.78.tar.gz \
     && rm -rf /opt/apache-tomcat-8.5.78.tar.gz \
